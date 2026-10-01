@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110" width="100%" height="100%" fill="none">
+  <!-- Stylized M Emblem -->
+  <g transform="translate(6, 12)">
+    <path d="M12 4H96L90 14H6L12 4Z" fill="#38BDF8" />
+    <path d="M0 76H84L78 86H-6L0 76Z" fill="#38BDF8" />
+    
+    <path d="M16 70L32 18H48L58 48L74 18H90L68 70H50L40 40L28 70H16Z" fill="#FFFFFF" />
+    <path d="M38 70L54 22H64L48 70H38Z" fill="#38BDF8" />
+  </g>
+
+  <!-- Typography: MAXWELL INDUCTION for dark backgrounds -->
+  <g transform="translate(116, 12)">
+    <text x="0" y="44" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="900" font-style="italic" font-size="44" letter-spacing="2.5" fill="#FFFFFF">
+      MAXWELL
+    </text>
+    <text x="2" y="74" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="800" font-style="italic" font-size="22" letter-spacing="9" fill="#38BDF8">
+      INDUCTION
+    </text>
+  </g>
+</svg>

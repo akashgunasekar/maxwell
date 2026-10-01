@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110" width="100%" height="100%" fill="none">
+  <!-- Stylized M Emblem -->
+  <g transform="translate(6, 12)">
+    <!-- Top & Bottom Framing Bars -->
+    <path d="M12 4H96L90 14H6L12 4Z" fill="#002D62" />
+    <path d="M0 76H84L78 86H-6L0 76Z" fill="#002D62" />
+    
+    <!-- Central Bold Angular M Structure -->
+    <path d="M16 70L32 18H48L58 48L74 18H90L68 70H50L40 40L28 70H16Z" fill="#002D62" />
+    <path d="M38 70L54 22H64L48 70H38Z" fill="#0284C7" />
+  </g>
+
+  <!-- Typography: MAXWELL INDUCTION -->
+  <g transform="translate(116, 12)">
+    <!-- MAXWELL in bold italic sans -->
+    <text x="0" y="44" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="900" font-style="italic" font-size="44" letter-spacing="2.5" fill="#002D62">
+      MAXWELL
+    </text>
+    
+    <!-- INDUCTION wide tracked -->
+    <text x="2" y="74" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="800" font-style="italic" font-size="22" letter-spacing="9" fill="#002D62">
+      INDUCTION
+    </text>
+  </g>
+</svg>

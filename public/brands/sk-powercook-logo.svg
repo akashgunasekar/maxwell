@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 84" width="100%" height="100%" fill="none">
+  <!-- Symbol: Navy Industrial Engine Monogram with Orange/Red Thermal Flame Accent -->
+  <g transform="translate(6, 6)">
+    <!-- Industrial Outer Hex/Gear segment in Navy -->
+    <path d="M12 4L38 4L48 20L38 36L12 36L2 20Z" fill="#0B2545" />
+    <path d="M16 8L34 8L42 20L34 32L16 32L8 20Z" fill="#133E68" />
+    <circle cx="25" cy="20" r="10" fill="#07172C" />
+
+    <!-- S & K stylized lines -->
+    <path d="M19 15C19 14 22 13 25 13C27 13 29 14 29 16C29 18 27 19 25 20C22 21 20 22 20 24C20 26 22 27 26 27C29 27 31 26 31 25" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" />
+    
+    <!-- Dynamic Orange / Red Flame Accent rising from lower core -->
+    <path d="M38 10C42 16 46 22 43 28C41 33 35 37 38 42C38 42 46 38 47 30C48 24 43 16 38 10Z" fill="#EA580C" />
+    <path d="M39 18C41 22 44 26 42 30C40 33 36 35 38 38C38 38 43 35 44 30C45 26 42 21 39 18Z" fill="#F97316" />
+    <circle cx="41" cy="14" r="1.5" fill="#FDE047" />
+  </g>
+
+  <!-- Typography: Navy, Blue, Flame Accent -->
+  <g transform="translate(74, 10)">
+    <!-- Main text: SK POWER COOK -->
+    <text x="0" y="30" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="900" font-size="28" letter-spacing="2" fill="#0B2545">
+      SK POWER COOK
+    </text>
+    
+    <!-- MACHINERY badge -->
+    <rect x="272" y="11" width="94" height="22" rx="4" fill="#0284C7" />
+    <text x="319" y="26" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="800" font-size="10.5" letter-spacing="2" fill="#FFFFFF">
+      MACHINERY
+    </text>
+
+    <!-- Subtitle: Engineered Solutions for Commercial Food Processing -->
+    <text x="1" y="49" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="600" font-size="9.5" letter-spacing="1.2" fill="#475569">
+      ENGINEERED SOLUTIONS FOR COMMERCIAL FOOD PROCESSING
+    </text>
+  </g>
+</svg>
