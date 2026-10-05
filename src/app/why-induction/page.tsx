@@ -100,8 +100,8 @@ export default function WhyInductionPage() {
         </div>
 
         {/* Bottom CTA Strip */}
-        <div className="mt-12 rounded-2xl bg-sky-900 p-8 text-white text-center">
-          <h3 className="text-xl sm:text-2xl font-extrabold">
+        <div className="mt-12 rounded-2xl bg-gradient-to-br from-slate-900 via-sky-950 to-slate-900 p-8 text-white text-center border border-sky-500/20 shadow-xl">
+          <h3 className="text-xl sm:text-2xl font-extrabold !text-white">
             Ready to Transition Your Kitchen to Induction?
           </h3>
           <p className="mt-2 text-xs sm:text-sm text-sky-200 max-w-xl mx-auto">

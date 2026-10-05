@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   ShieldAlert,
@@ -138,30 +137,6 @@ export default function WhyInduction({ showHeading = true }: { showHeading?: boo
               </div>
             );
           })}
-        </div>
-
-        {/* Working Principle Technical Diagram */}
-        <div className="mt-14 rounded-2xl border border-slate-200 bg-slate-900 p-6 sm:p-8 text-white shadow-xl overflow-hidden">
-          <div className="max-w-2xl mb-6">
-            <span className="inline-block text-xs font-bold uppercase tracking-wider text-sky-400">
-              Engineering Architecture
-            </span>
-            <h3 className="text-xl sm:text-2xl font-extrabold text-white mt-1">
-              Induction Cooker Working Principle
-            </h3>
-            <p className="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
-              High-frequency alternating current passes through copper induction coils beneath the Ceran surface, creating a high-frequency magnetic field. When magnetic permeability cookware is placed on top, microscopic vortex currents agitate molecules within the pot base, generating immediate, direct heat inside the pan itself.
-            </p>
-          </div>
-
-          <div className="relative aspect-21/9 w-full overflow-hidden rounded-xl bg-black border border-slate-800">
-            <Image
-              src="/images/induction-working-principle.png"
-              alt="Induction Cooker Working Principle Diagram showing Magnetic Permeability Pot, Vortex, Insulating Layer, Magnetic Lines, Power Input, Core Module Processing, Coil, and Pot Being Heated"
-              fill
-              className="object-contain"
-            />
-          </div>
         </div>
 
         {/* Brochure Fact-Based Additional Benefits Checklist */}

@@ -128,11 +128,8 @@ export default function Footer() {
               <li className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 shrink-0 text-sky-700" />
                 <div className="flex flex-col">
-                  <a href="tel:+918925857821" className="hover:text-sky-700">
-                    +91 89258 57821
-                  </a>
-                  <a href="tel:+918925857823" className="hover:text-sky-700">
-                    +91 89258 57823
+                  <a href={`tel:${SITE_CONFIG.contact.primaryPhone.replace(/\s+/g, "")}`} className="hover:text-sky-700 font-medium">
+                    {SITE_CONFIG.contact.primaryPhone}
                   </a>
                 </div>
               </li>
@@ -163,11 +160,17 @@ export default function Footer() {
             </div>
             <div className="flex flex-wrap items-center gap-6">
               {SITE_CONFIG.groupBrands.map((brand) => (
-                <div key={brand.name} className="flex items-center gap-2">
+                <a
+                  key={brand.name}
+                  href={brand.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 group hover:text-sky-700 transition"
+                >
                   <span className="inline-block h-1.5 w-1.5 rounded-full bg-sky-700"></span>
-                  <span className="text-xs font-semibold text-slate-800">{brand.name}</span>
+                  <span className="text-xs font-semibold text-slate-800 group-hover:text-sky-700 transition">{brand.name}</span>
                   <span className="text-[11px] text-slate-500">({brand.badge})</span>
-                </div>
+                </a>
               ))}
             </div>
           </div>

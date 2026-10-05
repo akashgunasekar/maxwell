@@ -241,32 +241,65 @@ export default function HomePage() {
       {/* 9. MAXWELL GROUP INTEGRATION */}
       <GroupBrands />
 
-      {/* 10. FINAL CONVERSION CTA */}
-      <section className="bg-sky-900 py-16 text-white text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-tech opacity-10 pointer-events-none"></div>
-        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block rounded-full bg-sky-800/80 px-4 py-1 text-xs font-bold uppercase tracking-wider text-sky-200 border border-sky-700 mb-4">
-            Partnering For A Cleaner, Healthier & More Efficient Tomorrow
-          </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
-            Ready to Upgrade Your Commercial Kitchen to Induction?
+      {/* 10. FINAL CONVERSION CTA - HIGHLIGHTED */}
+      <section className="relative overflow-hidden py-20 lg:py-28 bg-gradient-to-br from-slate-950 via-sky-950 to-slate-900 text-white text-center border-y border-sky-500/20 shadow-2xl">
+        {/* Glowing Ambient Backdrop Orbs */}
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-sky-500/20 blur-[130px] rounded-full pointer-events-none" />
+        <div className="absolute -bottom-24 right-1/4 w-[450px] h-[250px] bg-blue-600/15 blur-[100px] rounded-full pointer-events-none" />
+        
+        {/* Subtle luminous grid & top highlight line */}
+        <div className="absolute inset-0 bg-grid-tech opacity-20 pointer-events-none" />
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-sky-400 to-transparent" />
+
+        <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          {/* Luminous Pulsing Badge */}
+          <div className="inline-flex items-center gap-2 rounded-full bg-sky-500/15 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-sky-300 border border-sky-400/30 shadow-[0_0_20px_rgba(56,189,248,0.25)] mb-6 backdrop-blur-md">
+            <span className="h-2 w-2 rounded-full bg-sky-400 animate-pulse" />
+            <span>Partnering For A Cleaner, Healthier & More Efficient Tomorrow</span>
+          </div>
+
+          {/* Prominent High-Contrast Heading */}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight !text-white leading-tight drop-shadow-md">
+            Ready to Upgrade Your Commercial Kitchen to{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-cyan-200 to-white">
+              Induction?
+            </span>
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-sky-100 leading-relaxed max-w-2xl mx-auto">
+
+          <p className="mt-4 text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto font-normal">
             Contact our factory sales team for model sizing, electrical load recommendations, direct B2B quotations, and Pan-India installation support.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+
+          {/* Value Highlights Pill Strip */}
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto text-left sm:text-center">
+            <div className="flex items-center justify-center gap-2.5 rounded-xl bg-white/5 border border-white/10 px-4 py-3 backdrop-blur-sm shadow-xs">
+              <Zap className="h-4 w-4 text-sky-400 shrink-0" />
+              <span className="text-xs font-bold text-white uppercase tracking-wider">~90% Thermal Transfer</span>
+            </div>
+            <div className="flex items-center justify-center gap-2.5 rounded-xl bg-white/5 border border-white/10 px-4 py-3 backdrop-blur-sm shadow-xs">
+              <ShieldCheck className="h-4 w-4 text-emerald-400 shrink-0" />
+              <span className="text-xs font-bold text-white uppercase tracking-wider">12 Months OEM Warranty</span>
+            </div>
+            <div className="flex items-center justify-center gap-2.5 rounded-xl bg-white/5 border border-white/10 px-4 py-3 backdrop-blur-sm shadow-xs">
+              <Gauge className="h-4 w-4 text-amber-400 shrink-0" />
+              <span className="text-xs font-bold text-white uppercase tracking-wider">Pan-India Technical Team</span>
+            </div>
+          </div>
+
+          {/* Action CTAs */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-sky-900 shadow-md hover:bg-sky-50 transition"
+              className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-white px-8 py-4 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-900 shadow-[0_4px_25px_rgba(255,255,255,0.25)] hover:bg-sky-50 hover:shadow-[0_4px_35px_rgba(56,189,248,0.4)] hover:-translate-y-0.5 transition-all"
             >
               <span>Request a Quotation</span>
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 text-sky-600" />
             </Link>
             <a
               href={`tel:${SITE_CONFIG.contact.primaryPhone.replace(/\s+/g, "")}`}
-              className="inline-flex items-center gap-2 rounded-lg border border-sky-400/50 bg-sky-800/60 px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-sky-800 transition"
+              className="inline-flex items-center justify-center gap-2.5 rounded-xl border-2 border-sky-400/40 bg-sky-500/10 px-8 py-4 text-xs sm:text-sm font-extrabold uppercase tracking-wider !text-white backdrop-blur-md hover:bg-sky-500/20 hover:border-sky-300 hover:-translate-y-0.5 transition-all shadow-sm"
             >
-              <Phone className="h-4 w-4" />
+              <Phone className="h-4 w-4 text-sky-300" />
               <span>Call: {SITE_CONFIG.contact.primaryPhone}</span>
             </a>
           </div>

@@ -93,11 +93,8 @@ export default function ContactPage() {
                       Direct Sales & Service Hotlines
                     </span>
                     <div className="mt-0.5 flex flex-col font-semibold text-slate-900">
-                      <a href="tel:+918925857821" className="hover:text-sky-700">
-                        +91 89258 57821
-                      </a>
-                      <a href="tel:+918925857823" className="hover:text-sky-700">
-                        +91 89258 57823
+                      <a href={`tel:${SITE_CONFIG.contact.primaryPhone.replace(/\s+/g, "")}`} className="hover:text-sky-700">
+                        {SITE_CONFIG.contact.primaryPhone}
                       </a>
                     </div>
                   </div>
@@ -141,9 +138,15 @@ export default function ContactPage() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-xl bg-emerald-600 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-emerald-700 transition shadow-xs"
+                  className="flex items-center justify-center gap-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] py-3.5 text-xs font-bold uppercase tracking-wider text-white transition shadow-md hover:shadow-lg"
                 >
-                  <MessageCircle className="h-4 w-4" />
+                  <svg viewBox="0 0 24 24" className="h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M18.403 5.604A9.046 9.046 0 0 0 12.012 2.95C7.02 2.95 2.966 7.003 2.964 11.998c0 1.6.418 3.16 1.212 4.536L2.8 21.2l4.804-1.26a9.006 9.006 0 0 0 4.404 1.152h.004c4.992 0 9.046-4.053 9.048-9.048 0-2.418-.941-4.69-2.657-6.44zm-6.391 14.07h-.003a7.51 7.51 0 0 1-3.826-1.049l-.274-.163-2.845.746.759-2.773-.179-.285a7.487 7.487 0 0 1-1.15-4.148c0-4.147 3.374-7.521 7.524-7.521 2.01 0 3.9.784 5.321 2.206a7.478 7.478 0 0 1 2.2 5.32c-.002 4.149-3.376 7.524-7.526 7.524zm4.127-5.632c-.226-.113-1.339-.661-1.547-.737-.208-.075-.359-.113-.51.113-.151.226-.585.736-.717.887-.132.151-.264.17-.49.057-.226-.113-.956-.353-1.82-1.124-.673-.6-1.128-1.341-1.26-1.568-.132-.226-.014-.349.099-.461.102-.102.226-.264.339-.396.113-.132.151-.226.226-.377.075-.151.038-.283-.019-.396-.057-.113-.51-1.228-.698-1.682-.184-.441-.371-.381-.51-.388-.132-.007-.283-.008-.434-.008-.151 0-.396.057-.604.283-.207.226-.792.774-.792 1.888 0 1.114.811 2.19.924 2.341.113.151 1.597 2.439 3.869 3.419.541.233.963.373 1.292.477.543.173 1.037.149 1.427.09.435-.065 1.339-.548 1.528-1.077.189-.529.189-.982.132-1.077-.057-.094-.207-.151-.433-.264z"
+                    />
+                  </svg>
                   <span>Chat on WhatsApp Directly</span>
                 </a>
               </div>

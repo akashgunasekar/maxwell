@@ -122,7 +122,7 @@ export default function RootLayout({
               },
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+91-89258-57821",
+                telephone: "+91-89258-57824",
                 contactType: "sales and customer service",
                 areaServed: "IN",
                 availableLanguage: ["English", "Tamil", "Hindi"],
