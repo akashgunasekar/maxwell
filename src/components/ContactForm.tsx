@@ -24,18 +24,39 @@ export default function ContactForm({ initialProduct = "", onSuccess }: ContactF
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate submission
-    setTimeout(() => {
+    try {
+      const payload = {
+        name: formData.name,
+        company: formData.company,
+        phone: formData.phone,
+        email: formData.email,
+        location: formData.location,
+        productInterest: formData.productInterest,
+        message: formData.message,
+        page_url: typeof window !== "undefined" ? window.location.href : "",
+      };
+
+      await fetch("https://crm.vfegroups.com/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-API-Key": "mx_07320adb2e93465fba0730616c7039fddaaf28fbacfa8540",
+        },
+        body: JSON.stringify(payload),
+      });
+    } catch (err) {
+      console.error("[Maxwell CRM] Submission error:", err);
+    } finally {
       setIsSubmitting(false);
       setSubmitted(true);
       if (onSuccess) {
         setTimeout(() => onSuccess(), 2500);
       }
-    }, 700);
+    }
   };
 
   const productOptions = [
@@ -100,7 +121,7 @@ export default function ContactForm({ initialProduct = "", onSuccess }: ContactF
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 text-left">
+    <form data-maxwell-crm="" onSubmit={handleSubmit} className="space-y-4 text-left">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {/* Name */}
         <div>
@@ -109,6 +130,7 @@ export default function ContactForm({ initialProduct = "", onSuccess }: ContactF
           </label>
           <input
             type="text"
+            name="name"
             required
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -124,6 +146,7 @@ export default function ContactForm({ initialProduct = "", onSuccess }: ContactF
           </label>
           <input
             type="text"
+            name="company"
             value={formData.company}
             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
             placeholder="e.g. Grand Palace Hotel / Caterers"
@@ -140,6 +163,7 @@ export default function ContactForm({ initialProduct = "", onSuccess }: ContactF
           </label>
           <input
             type="tel"
+            name="phone"
             required
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -155,6 +179,7 @@ export default function ContactForm({ initialProduct = "", onSuccess }: ContactF
           </label>
           <input
             type="email"
+            name="email"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             placeholder="chef@kitchen.com"
@@ -171,6 +196,7 @@ export default function ContactForm({ initialProduct = "", onSuccess }: ContactF
           </label>
           <input
             type="text"
+            name="location"
             value={formData.location}
             onChange={(e) => setFormData({ ...formData, location: e.target.value })}
             placeholder="e.g. Chennai, Bangalore, Mumbai"
@@ -184,6 +210,7 @@ export default function ContactForm({ initialProduct = "", onSuccess }: ContactF
             Product Interest <span className="text-rose-500">*</span>
           </label>
           <select
+            name="productInterest"
             value={formData.productInterest}
             onChange={(e) => setFormData({ ...formData, productInterest: e.target.value })}
             className="w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 focus:border-sky-600 focus:outline-none focus:ring-1 focus:ring-sky-600"
@@ -203,6 +230,7 @@ export default function ContactForm({ initialProduct = "", onSuccess }: ContactF
           Requirement / Message <span className="text-rose-500">*</span>
         </label>
         <textarea
+          name="message"
           required
           rows={3}
           value={formData.message}

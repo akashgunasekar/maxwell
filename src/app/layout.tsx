@@ -102,7 +102,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${barlow.variable} ${barlowCondensed.variable} bg-white text-slate-900 scroll-smooth`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${barlow.variable} ${barlowCondensed.variable} bg-white text-slate-900 scroll-smooth`}
+    >
       <head>
         {/* Organization Structured Data Schema */}
         <script
@@ -138,8 +142,17 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* Maxwell CRM Embed Script */}
+        <script
+          src="https://crm.vfegroups.com/embed.js"
+          data-key="mx_07320adb2e93465fba0730616c7039fddaaf28fbacfa8540"
+          defer
+        />
       </head>
-      <body className="min-h-screen flex flex-col bg-white text-slate-900 antialiased selection:bg-sky-600 selection:text-white">
+      <body
+        suppressHydrationWarning
+        className="min-h-screen flex flex-col bg-white text-slate-900 antialiased selection:bg-sky-600 selection:text-white"
+      >
         <QuoteProvider>
           <Header />
           <main className="flex-1">{children}</main>
