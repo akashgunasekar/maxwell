@@ -56,7 +56,7 @@ export default function AboutPage() {
                 At Maxwell Induction, we believe in smarter technology for a better, sustainable future. Our induction solutions help commercial kitchens cook better, save energy and create a cleaner, safer working environment.
               </p>
               <p className="mt-3 text-sm text-slate-600 leading-relaxed font-normal">
-                As a specialized division within the Maxwell Group, Maxwell Induction focuses exclusively on commercial induction engineering. From compact live counter cooktops to 400-liter tilting industrial bratt pans and high-output steam generators, every piece of Maxwell equipment is designed around thermal efficiency, precise digital control, and heavy-duty reliability.
+                As a specialized division within the Maxwell Group, Maxwell Induction focuses exclusively on commercial induction engineering. From compact live counter cooktops to 400-liter tilting industrial bratt pans and heavy-duty cooking ranges, every piece of Maxwell equipment is designed around thermal efficiency, precise digital control, and heavy-duty reliability.
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-4">

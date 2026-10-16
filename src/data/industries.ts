@@ -40,9 +40,9 @@ export const INDUSTRIES: Industry[] = [
     id: "industrial-kitchens",
     name: "Industrial Kitchens",
     shortDescription: "Central production units, packaged food manufacturers, and large-scale commissary kitchens.",
-    description: "Industrial food processing operations require rugged stainless steel construction, 3-phase heavy power modules, and continuous heavy-duty reliability. Maxwell tilting pans, khoya machines, and cooking mixers handle continuous industrial duties.",
+    description: "Industrial food processing operations require rugged stainless steel construction, 3-phase heavy power modules, and continuous heavy-duty reliability. Maxwell tilting bratt pans, boiling pans, and motorized cooking mixers handle continuous industrial duties.",
     recommendedCategories: ["bulk-cooking", "specialized", "advanced"],
-    keyBenefits: ["Continuous heavy-duty duty cycle", "Precision motorized stirring and tilting", "Steam generation on demand"],
+    keyBenefits: ["Continuous heavy-duty duty cycle", "Precision motorized stirring and tilting", "High-capacity continuous cooking"],
     image: "/images/ind_industrial_central.jpg",
   },
   {

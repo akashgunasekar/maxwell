@@ -105,7 +105,7 @@ export default function Hero() {
                 {/* Micro Metrics Strip */}
                 <div className="mt-3 grid grid-cols-3 divide-x divide-slate-100 rounded-lg bg-slate-50 py-2.5 text-center">
                   <div>
-                    <span className="block text-base font-extrabold text-sky-800">28+</span>
+                    <span className="block text-base font-extrabold text-sky-800">20+</span>
                     <span className="text-[10px] font-semibold text-slate-500 uppercase">Models</span>
                   </div>
                   <div>

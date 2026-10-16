@@ -91,8 +91,11 @@ export const metadata: Metadata = {
     images: ["/images/maxwell-kitchen-hero.jpg"],
   },
   icons: {
-    icon: "/brands/maxwell-induction.png",
-    apple: "/brands/maxwell-induction.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/brands/maxwell-icon.png", type: "image/png" },
+    ],
+    apple: "/brands/maxwell-icon.png",
   },
 };
 
@@ -119,7 +122,7 @@ export default function RootLayout({
               url: SITE_CONFIG.domain,
               logo: `${SITE_CONFIG.domain}/brands/maxwell-induction.png`,
               description:
-                "Manufacturer of commercial induction kitchen equipment, boiling pans, bratt pans, tabletop cookers, and industrial steam boilers.",
+                "Manufacturer of commercial induction kitchen equipment, boiling pans, bratt pans, tabletop cookers, and heavy-duty cooking ranges.",
               parentOrganization: {
                 "@type": "Organization",
                 name: SITE_CONFIG.parentGroup,

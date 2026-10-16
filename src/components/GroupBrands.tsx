@@ -30,9 +30,9 @@ export default function GroupBrands() {
       url: "https://www.maxwellinduction.com/",
       displayUrl: "maxwellinduction.com",
       description:
-        "High-efficiency commercial induction cooktops, woks, boiling pans, bratt pans, and steam boilers delivering ~90% efficiency and cool, flame-free kitchens.",
+        "High-efficiency commercial induction cooktops, woks, boiling pans, bratt pans, and multi-zone cooking ranges delivering ~90% efficiency and cool, flame-free kitchens.",
       points: [
-        "28+ Commercial Induction Models",
+        "20+ Commercial Induction Models",
         "Pan-India On-Site Technical Service",
       ],
     },

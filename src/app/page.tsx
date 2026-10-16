@@ -28,13 +28,13 @@ import { SITE_CONFIG } from "@/data/site";
 export default function HomePage() {
   // 8 Curated Featured Products per Section 44
   const featuredProductSlugs = [
+    "dual-zone-burner-range",
     "induction-cooktop",
     "commercial-induction-hot-plate",
     "induction-oil-fry-kadai-wok",
+    "induction-tabletop-cooktop",
     "commercial-induction-boiling-pan",
     "commercial-induction-bratt-pan",
-    "induction-tabletop-wok",
-    "induction-tabletop-cooktop",
     "multy-food-steamer",
   ];
 
@@ -66,7 +66,7 @@ export default function HomePage() {
                 At Maxwell Induction, we believe in smarter technology for a better, sustainable future. Our commercial induction solutions help professional kitchens cook faster, save substantial energy, and create a safer, radically cooler work environment.
               </p>
               <p className="mt-3 text-sm text-slate-600 leading-relaxed font-normal">
-                By replacing inefficient open fossil fuel flames with high-efficiency electromagnetic heat transfer, Maxwell equipment eliminates radiant heat spillover, eradicates toxic combustion gases, and provides instantaneous temperature repeatability across 28+ commercial models.
+                By replacing inefficient open fossil fuel flames with high-efficiency electromagnetic heat transfer, Maxwell equipment eliminates radiant heat spillover, eradicates toxic combustion gases, and provides instantaneous temperature repeatability across 20+ commercial models.
               </p>
 
               <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">

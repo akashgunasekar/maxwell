@@ -31,7 +31,7 @@ interface ProductPageProps {
   }>;
 }
 
-// Pre-render all 28 product routes at build time
+// Pre-render all 20 product routes at build time
 export async function generateStaticParams() {
   return PRODUCTS.map((product) => ({
     slug: product.slug,

@@ -9,7 +9,7 @@ import { SITE_CONFIG } from "@/data/site";
 export const metadata: Metadata = {
   title: "Commercial Induction Equipment | Complete Product Catalogue",
   description:
-    "Explore Maxwell Induction's complete range of commercial induction cooking, heating, frying, steaming and specialized kitchen equipment. 28+ heavy-duty models.",
+    "Explore Maxwell Induction's complete range of commercial induction cooking, heating, frying, steaming and specialized kitchen equipment. 20+ heavy-duty models.",
   keywords: [
     "commercial induction equipment",
     "commercial induction cooktop",

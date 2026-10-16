@@ -9,12 +9,12 @@ export interface Category {
 
 export const CATEGORIES: Category[] = [
   {
-    id: "tabletop",
-    name: "Tabletop Induction Equipment",
-    shortName: "Tabletop",
-    description: "Compact, high-efficiency countertop induction cookers, woks, fryers, and steamers for flexible commercial preparation.",
-    brochurePage: 3,
-    productCount: 12,
+    id: "advanced",
+    name: "Advanced / Special Application Equipment",
+    shortName: "Advanced",
+    description: "Heavy-duty dual zone burner ranges and front-of-house live counter kadai & wok combinations.",
+    brochurePage: 7,
+    productCount: 2,
   },
   {
     id: "commercial",
@@ -23,6 +23,14 @@ export const CATEGORIES: Category[] = [
     description: "Heavy-duty freestanding commercial induction cooktops, oil fry kadai woks, hot plates, and high-heat Chinese woks.",
     brochurePage: 4,
     productCount: 4,
+  },
+  {
+    id: "tabletop",
+    name: "Tabletop Induction Equipment",
+    shortName: "Tabletop",
+    description: "Compact, high-efficiency countertop induction cookers, woks, fryers, and steamers for flexible commercial preparation.",
+    brochurePage: 3,
+    productCount: 8,
   },
   {
     id: "bulk-cooking",
@@ -36,16 +44,8 @@ export const CATEGORIES: Category[] = [
     id: "specialized",
     name: "Specialized Induction Equipment",
     shortName: "Specialized",
-    description: "High-volume idly steamers, motorized cooking mixers, multi-zone cooktops, and freestanding deep fryers.",
+    description: "Industrial motorized cooking mixers and heavy-duty multi-zone commercial cooktops.",
     brochurePage: 6,
-    productCount: 4,
-  },
-  {
-    id: "advanced",
-    name: "Advanced / Special Application Equipment",
-    shortName: "Advanced",
-    description: "Multi-burner dual zones, live counter kadai & wok combinations, khoya sweet machines, and rapid steam boilers.",
-    brochurePage: 7,
-    productCount: 4,
+    productCount: 2,
   },
 ];
