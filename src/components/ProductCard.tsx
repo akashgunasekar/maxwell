@@ -22,7 +22,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <div className="relative h-full w-full transition-transform duration-300 group-hover:scale-105">
             <Image
               src={product.image}
-              alt={`${product.name} - Commercial Induction Equipment`}
+              alt={`${product.name} commercial induction equipment by Maxwell`}
               fill
               className="object-contain"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

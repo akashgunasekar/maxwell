@@ -7,26 +7,22 @@ import SectionHeading from "@/components/SectionHeading";
 import { INDUSTRIES } from "@/data/industries";
 import { ArrowRight, CheckCircle2, FileText } from "lucide-react";
 import { SITE_CONFIG } from "@/data/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Commercial Induction Solutions for Professional Kitchens | Industries",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Commercial Induction Equipment for Hotels, Restaurants & QSRs | Industries",
   description:
-    "Explore how Maxwell Induction equipment powers commercial cooking in Hotels, Caterers, Institutions, Industrial Kitchens, Hospitals, Airlines, Marine Vessels, and QSR chains.",
+    "Maxwell commercial induction solutions for hotels, restaurants, catering banquets, hospitals, industrial central kitchens, institutions, airlines & marine galleys.",
+  path: "/industries",
   keywords: [
-    "commercial induction for hotels",
-    "induction for banquet halls",
-    "institutional induction kitchens",
-    "hospital commercial induction",
-    "marine galley induction",
-    "cloud kitchen induction",
+    "hotel kitchen induction equipment",
+    "restaurant kitchen equipment",
+    "commercial food processing equipment",
+    "industrial cooking equipment",
+    "commercial induction cooking equipment",
+    "commercial kitchen equipment suppliers",
   ],
-  openGraph: {
-    title: "Commercial Induction Solutions for Professional Kitchens | Maxwell Induction",
-    description:
-      "Engineered commercial induction equipment tailored for 8 major food production industries.",
-    url: `${SITE_CONFIG.domain}/industries`,
-  },
-};
+});
 
 export default function IndustriesPage() {
   return (

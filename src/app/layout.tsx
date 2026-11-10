@@ -5,8 +5,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import QuoteModal from "@/components/QuoteModal";
+import JsonLd from "@/components/JsonLd";
+import Analytics from "@/components/Analytics";
 import { QuoteProvider } from "@/context/QuoteContext";
 import { SITE_CONFIG } from "@/data/site";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 
 const barlow = Barlow({
   variable: "--font-barlow",
@@ -38,16 +41,18 @@ export const metadata: Metadata = {
   description:
     "Professional induction solutions for commercial kitchens, designed around efficient cooking, precise temperature control, safer operation and professional kitchen performance.",
   keywords: [
+    "commercial induction kitchen equipment",
     "commercial induction cooking equipment",
     "commercial induction equipment",
     "commercial induction cooktop",
     "commercial induction cooker",
-    "commercial induction kitchen equipment",
     "industrial induction cooking equipment",
-    "commercial induction hot plate",
-    "commercial induction wok",
-    "commercial induction boiling pan",
-    "commercial induction bratt pan",
+    "induction hot plate",
+    "induction boiling pan",
+    "induction bratt pan",
+    "induction cooking mixer machine",
+    "induction steamer",
+    "commercial kitchen equipment manufacturer",
     "induction cooking equipment",
     "commercial kitchen induction",
     "Maxwell Induction",
@@ -77,8 +82,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/maxwell-kitchen-hero.jpg",
-        width: 1200,
-        height: 630,
+        width: 2480,
+        height: 1772,
         alt: "Maxwell Induction Commercial Kitchen Equipment",
       },
     ],
@@ -89,6 +94,10 @@ export const metadata: Metadata = {
     description:
       "Powering a Cleaner, Smarter Kitchen. High-efficiency commercial induction suites with 90% thermal transfer.",
     images: ["/images/maxwell-kitchen-hero.jpg"],
+  },
+  // Google Search Console HTML-tag verification (set NEXT_PUBLIC_GSC_VERIFICATION)
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
   },
   icons: {
     icon: [
@@ -111,40 +120,8 @@ export default function RootLayout({
       className={`${barlow.variable} ${barlowCondensed.variable} bg-white text-slate-900 scroll-smooth`}
     >
       <head>
-        {/* Organization Structured Data Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: SITE_CONFIG.name,
-              url: SITE_CONFIG.domain,
-              logo: `${SITE_CONFIG.domain}/brands/maxwell-induction.png`,
-              description:
-                "Manufacturer of commercial induction kitchen equipment, boiling pans, bratt pans, tabletop cookers, and heavy-duty cooking ranges.",
-              parentOrganization: {
-                "@type": "Organization",
-                name: SITE_CONFIG.parentGroup,
-              },
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+91-89258-57824",
-                contactType: "sales and customer service",
-                areaServed: "IN",
-                availableLanguage: ["English", "Tamil", "Hindi"],
-              },
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: SITE_CONFIG.contact.address.line1,
-                addressLocality: SITE_CONFIG.contact.address.locality,
-                postalCode: SITE_CONFIG.contact.address.pincode,
-                addressRegion: SITE_CONFIG.contact.address.state,
-                addressCountry: "IN",
-              },
-            }),
-          }}
-        />
+        {/* Organization + WebSite structured data */}
+        <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         {/* Maxwell CRM Embed Script */}
         <script
           src="https://crm.vfegroups.com/embed.js"
@@ -154,7 +131,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="min-h-screen flex flex-col bg-white text-slate-900 antialiased selection:bg-sky-600 selection:text-white"
+        className="min-h-screen flex flex-col bg-white text-slate-900 antialiased selection:bg-[#1d4a98] selection:text-white"
       >
         <QuoteProvider>
           <Header />
@@ -163,6 +140,7 @@ export default function RootLayout({
           <WhatsAppButton />
           <QuoteModal />
         </QuoteProvider>
+        <Analytics />
       </body>
     </html>
   );

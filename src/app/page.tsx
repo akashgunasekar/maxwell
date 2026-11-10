@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -24,18 +25,40 @@ import GroupBrands from "@/components/GroupBrands";
 import { PRODUCTS } from "@/data/products";
 import { CATEGORIES } from "@/data/categories";
 import { SITE_CONFIG } from "@/data/site";
+import { buildPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Commercial Induction Kitchen Equipment Manufacturer | Maxwell Induction",
+  description:
+    "Maxwell Induction is a leading commercial induction kitchen equipment manufacturer in Chennai, India. Energy-efficient induction cooktops, boiling pans, bratt pans, woks & steamers.",
+  path: "/",
+  keywords: [
+    "commercial induction kitchen equipment manufacturer",
+    "best induction equipment",
+    "commercial induction kitchen equipment",
+    "commercial induction cooking equipment",
+    "industrial induction kitchen equipment",
+    "commercial kitchen equipment manufacturer",
+    "commercial kitchen equipment suppliers",
+    "commercial induction equipment in india",
+    "commercial induction equipment manufacturer in chennai",
+    "energy efficient induction cooking equipment",
+    "hotel kitchen induction equipment",
+    "restaurant kitchen equipment",
+  ],
+});
 
 export default function HomePage() {
   // 8 Curated Featured Products per Section 44
   const featuredProductSlugs = [
     "dual-zone-burner-range",
-    "induction-cooktop",
+    "commercial-induction-cooktop",
     "commercial-induction-hot-plate",
     "induction-oil-fry-kadai-wok",
     "induction-tabletop-cooktop",
     "commercial-induction-boiling-pan",
     "commercial-induction-bratt-pan",
-    "multy-food-steamer",
+    "commercial-induction-multi-food-steamer",
   ];
 
   const featuredProducts = PRODUCTS.filter((p) =>
@@ -157,7 +180,7 @@ export default function HomePage() {
               href="/products"
               className="mt-4 sm:mt-0 inline-flex items-center gap-1.5 text-xs font-bold text-sky-800 hover:text-sky-950 transition"
             >
-              <span>View All 28 Products</span>
+              <span>View All 20 Products</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -173,7 +196,7 @@ export default function HomePage() {
               href="/products"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-700 px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-white shadow-sm hover:bg-sky-800 transition"
             >
-              <span>Explore Complete 28-Product Catalogue</span>
+              <span>Explore Complete 20-Product Catalogue</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

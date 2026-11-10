@@ -24,8 +24,6 @@ export interface Product {
   features: string[];
   applications: string[];
   models: ProductModel[];
-  seoTitle: string;
-  seoDescription: string;
   featured?: boolean;
 }
 
@@ -42,7 +40,7 @@ export const PRODUCTS: Product[] = [
     brochurePage: 7,
     shortDescription: "Heavy two-burner commercial induction range available in 8+8 kW, 12+12 kW, and 15+15 kW.",
     description: "The Maxwell Dual Zone Burner Range is an industrial two-burner cooking range designed for heavy pot preparation and high-heat sautéing. Featuring two powerful side-by-side induction wells across a 1500 mm wide chassis with power configurations of 8+8 kW, 12+12 kW, or 15+15 kW, it handles large stockpots and woks with extreme thermal efficiency.",
-    image: "/products/dual-zone-burner-range.png",
+    image: "/products/commercial-induction-dual-zone-burner-range.webp",
     features: [
       "Two heavy-duty independent induction burners",
       "Three high-output power options: 8+8 kW, 12+12 kW, and 15+15 kW",
@@ -80,8 +78,6 @@ export const PRODUCTS: Product[] = [
         frequency: "50 Hz",
       },
     ],
-    seoTitle: "Dual Zone Burner Induction Range | Maxwell Induction",
-    seoDescription: "Commercial dual zone induction cooking range by Maxwell Induction. Available in 8+8 kW, 12+12 kW, and 15+15 kW configurations for heavy-duty kitchens.",
   },
   {
     id: "live-counter-kadai-wok",
@@ -92,7 +88,7 @@ export const PRODUCTS: Product[] = [
     brochurePage: 7,
     shortDescription: "Modular multi-configuration commercial induction cooking counter for live display kitchen stations.",
     description: "The Maxwell Live Counter Kadai + Wok series is specifically created for front-of-house open kitchens, luxury buffet islands, and interactive catering stations. Available in 2-flat, 2-wok, flat+wok, and triple burner configurations, it offers dramatic live cooking performance with zero radiant heat blowing on dining guests.",
-    image: "/products/live-counter-kadai-wok.png",
+    image: "/products/induction-live-counter-kadai-wok.webp",
     features: [
       "Customizable configurations: dual flat, dual wok, flat+wok, or triple zone",
       "Power options: 5+5 kW on 220 V or 5+5+5 kW on 440 V",
@@ -143,15 +139,13 @@ export const PRODUCTS: Product[] = [
         notes: "Triple zone station",
       },
     ],
-    seoTitle: "Live Counter Kadai + Wok Induction Range | Maxwell Induction",
-    seoDescription: "Front-of-house live counter induction cooking range with kadai and wok combinations by Maxwell Induction. Models from 5+5 kW to 5+5+5 kW.",
   },
   // ==========================================
   // CATEGORY 02: COMMERCIAL INDUCTION EQUIPMENT (Brochure Page 4)
   // ==========================================
   {
     id: "induction-cooktop",
-    slug: "induction-cooktop",
+    slug: "commercial-induction-cooktop",
     name: "Induction Cooktop",
     category: "commercial",
     categoryName: "Commercial Induction Equipment",
@@ -159,7 +153,7 @@ export const PRODUCTS: Product[] = [
     featured: true,
     shortDescription: "Heavy-duty freestanding commercial induction cooktop range with integrated rear backsplash, from 8 kW to 18 kW.",
     description: "The Maxwell Commercial Induction Cooktop is an industrial-strength freestanding range built for continuous, heavy duty cooking in high-volume hotel and hospital kitchens. Available in 8 kW, 12 kW, 15 kW, and 18 kW ratings with a heavy stainless steel body and 600 mm tall rear backsplash, it replaces conventional gas burners with cleaner, cooler, and 90% thermally efficient induction technology.",
-    image: "/products/induction-cooktop.png",
+    image: "/products/commercial-induction-cooktop-range.webp",
     features: [
       "Heavy freestanding design with 600 mm rear stainless backsplash",
       "High power range: 8 kW, 12 kW, 15 kW, and 18 kW options",
@@ -206,8 +200,6 @@ export const PRODUCTS: Product[] = [
         frequency: "50 Hz",
       },
     ],
-    seoTitle: "Commercial Induction Cooktop (8 kW - 18 kW) | Maxwell Induction",
-    seoDescription: "Heavy-duty freestanding commercial induction cooktop by Maxwell Induction. Models MI-FR-08 to MI-FR-18 from 8 kW to 18 kW with 415V 3-phase power.",
   },
   {
     id: "induction-oil-fry-kadai-wok",
@@ -219,7 +211,7 @@ export const PRODUCTS: Product[] = [
     featured: true,
     shortDescription: "Heavy-duty freestanding commercial induction frying kadai with capacities from 10 Liters to 80 Liters.",
     description: "The Maxwell Induction Oil Fry Kadai Wok is engineered for mass snack production, catering batches, and large-scale industrial frying. Ranging from 10 L to 80 L capacities and 8 kW to 25 kW power, the induction field heats the kadai bowl directly without open flames, preventing oil degradation, smoking, and fire hazards.",
-    image: "/products/induction-oil-fry-kadai-wok.png",
+    image: "/products/commercial-induction-oil-fry-kadai-wok.webp",
     features: [
       "Capacities from 10 Liters up to 80 Liters",
       "Power ratings from 8 kW to 25 kW on 415 V 3-Phase",
@@ -290,8 +282,6 @@ export const PRODUCTS: Product[] = [
         capacity: "80 L",
       },
     ],
-    seoTitle: "Commercial Induction Oil Fry Kadai Wok (10L - 80L) | Maxwell Induction",
-    seoDescription: "Freestanding commercial induction oil frying kadai by Maxwell Induction. 6 models from 10L to 80L capacity, 8 kW to 25 kW power for mass food frying.",
   },
   {
     id: "commercial-induction-hot-plate",
@@ -303,7 +293,7 @@ export const PRODUCTS: Product[] = [
     featured: true,
     shortDescription: "Heavy-duty freestanding commercial induction hot plate with 20 mm thick griddle plate, up to 30 kW.",
     description: "The Maxwell Commercial Induction Hot Plate represents the pinnacle of high-volume tawa engineering. Fitted with a massive 20 mm thick polished steel griddle plate and up to 30 kW of induction heating power across widths from 1010 mm to 2020 mm, it delivers uniform temperatures for dosas, rotis, parathas, and continuous breakfast searing without temperature drops.",
-    image: "/products/commercial-induction-hot-plate.png",
+    image: "/products/commercial-induction-hot-plate.webp",
     features: [
       "20 mm thick commercial-grade polished steel hot plate",
       "Available in 5 models from 12 kW to 30 kW power",
@@ -364,19 +354,17 @@ export const PRODUCTS: Product[] = [
         hotPlateThickness: "20 mm",
       },
     ],
-    seoTitle: "Commercial Induction Hot Plate 20mm Thick | Maxwell Induction",
-    seoDescription: "Commercial induction hot plate with 20mm thick steel surface by Maxwell Induction. Models from 12 kW to 30 kW for high-volume dosa and griddle cooking.",
   },
   {
     id: "chinese-wok",
-    slug: "chinese-wok",
+    slug: "commercial-induction-chinese-wok",
     name: "Chinese Wok",
     category: "commercial",
     categoryName: "Commercial Induction Equipment",
     brochurePage: 4,
     shortDescription: "Freestanding commercial induction Chinese wok range with water faucet and rear drainage.",
     description: "The Maxwell Commercial Chinese Wok brings high-efficiency induction power to traditional Asian cooking lines. Featuring an 8 kW induction wok station with integrated water faucet, wok cooling rinse, and deep drain trough, it generates intense heat in seconds while keeping the chef's station cool and comfortable.",
-    image: "/products/chinese-wok.png",
+    image: "/products/commercial-induction-chinese-wok.webp",
     features: [
       "High-power 8 kW commercial induction wok burner",
       "Available in standard 630 mm and wide 1105 mm models",
@@ -405,8 +393,6 @@ export const PRODUCTS: Product[] = [
         frequency: "50 Hz",
       },
     ],
-    seoTitle: "Commercial Induction Chinese Wok Range | Maxwell Induction",
-    seoDescription: "Freestanding commercial induction Chinese wok range with 8 kW power, integrated water faucet and backsplash from Maxwell Induction.",
   },
 
   // ==========================================
@@ -422,7 +408,7 @@ export const PRODUCTS: Product[] = [
     featured: true,
     shortDescription: "Compact commercial tabletop induction cooktop with instant digital temperature control and auto pan detection.",
     description: "The Maxwell Induction Tabletop Cooktop delivers fast, reliable, and energy-efficient commercial cooking in a space-saving countertop form factor. Designed for hotel live stations, à la carte preparation, and compact commercial kitchens, it transfers up to 90% of heat directly into cookware without open flames.",
-    image: "/products/induction-tabletop-cooktop.png",
+    image: "/products/induction-tabletop-cooktop.webp",
     features: [
       "Auto Pan Detection with auto safety shut-off",
       "Instant multi-level digital temperature control",
@@ -447,8 +433,6 @@ export const PRODUCTS: Product[] = [
         capacity: "5 kW Tabletop",
       },
     ],
-    seoTitle: "Induction Tabletop Cooktop | Maxwell Induction",
-    seoDescription: "Commercial tabletop induction cooktop by Maxwell Induction. Available in 3.5 kW and 5 kW capacities with instant heat control and 90% thermal efficiency.",
   },
   {
     id: "induction-tabletop-wok",
@@ -460,7 +444,7 @@ export const PRODUCTS: Product[] = [
     featured: true,
     shortDescription: "High-power concave induction tabletop wok engineered for high-heat Asian stir-frying and rapid tossing.",
     description: "The Maxwell Induction Tabletop Wok is purpose-built for commercial Asian and Chinese cooking. Featuring a heavy concave glass bowl that perfectly contours to standard round-bottom woks, it delivers targeted electromagnetic induction for lightning-fast heat transfer and authentic wok hei without intense ambient radiant heat.",
-    image: "/products/induction-tabletop-wok.png",
+    image: "/products/induction-tabletop-wok.webp",
     features: [
       "Precision concave Ceran bowl for round-bottom woks",
       "Instant high-temperature heat response",
@@ -478,8 +462,6 @@ export const PRODUCTS: Product[] = [
         capacity: "5 kW",
       },
     ],
-    seoTitle: "Induction Tabletop Wok | Maxwell Induction",
-    seoDescription: "Commercial tabletop concave induction wok by Maxwell Induction with 5 kW power rating for fast Asian stir-frying and energy efficiency.",
   },
   {
     id: "induction-tabletop-inbuilt-kadai",
@@ -490,7 +472,7 @@ export const PRODUCTS: Product[] = [
     brochurePage: 3,
     shortDescription: "Integrated commercial induction kadai for continuous oil frying and heavy dry Indian cooking.",
     description: "The Maxwell Tabletop Inbuilt Kadai combines the versatility of traditional Indian kadai cooking with clean induction efficiency. Engineered with a built-in heavy-gauge stainless steel kadai bowl, it is ideal for continuous oil frying, dry masala roasting, curry reductions, and sweet preparation without scorched hot spots.",
-    image: "/products/induction-tabletop-inbuilt-kadai.png",
+    image: "/products/induction-tabletop-inbuilt-kadai.webp",
     features: [
       "Inbuilt heavy-gauge stainless steel kadai bowl",
       "Uniform heat distribution prevents oil burning",
@@ -508,8 +490,6 @@ export const PRODUCTS: Product[] = [
         capacity: "5 kW",
       },
     ],
-    seoTitle: "Induction Tabletop Inbuilt Kadai | Maxwell Induction",
-    seoDescription: "Maxwell Tabletop Inbuilt Kadai with 5 kW induction power for commercial oil frying and dry cooking in professional Indian kitchens.",
   },
   {
     id: "induction-tabletop-idli-steamer",
@@ -520,7 +500,7 @@ export const PRODUCTS: Product[] = [
     brochurePage: 3,
     shortDescription: "Countertop commercial induction idli steamer with 60 idlis capacity per batch.",
     description: "Designed for South Indian restaurants, breakfast pantries, and breakfast buffets, the Maxwell Tabletop Idli Steamer produces 60 soft, perfectly steamed idlis per batch. Induction steam generation starts almost instantaneously with zero boiler delays and minimal water consumption.",
-    image: "/products/induction-tabletop-idli-steamer.png",
+    image: "/products/induction-tabletop-idli-steamer.webp",
     features: [
       "60 idlis capacity per steaming batch",
       "Ultra-fast induction steam generation",
@@ -538,19 +518,17 @@ export const PRODUCTS: Product[] = [
         capacity: "60 idli's",
       },
     ],
-    seoTitle: "Induction Tabletop Idli Steamer 60 Idlis | Maxwell Induction",
-    seoDescription: "Commercial tabletop induction idli steamer with 60 idlis batch capacity. Fast induction steam generation and 12-month warranty from Maxwell Induction.",
   },
   {
     id: "induction-tabletop-induction-hot-plate",
-    slug: "induction-tabletop-induction-hot-plate",
+    slug: "induction-tabletop-hot-plate",
     name: "Induction Tabletop Induction Hot Plate",
     category: "tabletop",
     categoryName: "Tabletop Induction Equipment",
     brochurePage: 3,
     shortDescription: "3-Foot commercial tabletop induction hot plate for dosas, rotis, parathas, and continuous griddle searing.",
     description: "The Maxwell 3-Foot Tabletop Induction Hot Plate delivers uniform edge-to-edge heat across its heavy composite griddle surface. Induction coils positioned underneath ensure zero cold spots, rapid recovery after placing chilled dough, and 60% lower operating costs compared to commercial LPG flat tops.",
-    image: "/products/induction-tabletop-induction-hot-plate.png",
+    image: "/products/induction-tabletop-hot-plate.webp",
     features: [
       "3 Feet wide commercial cooking surface",
       "5 kW induction power with dual zone thermostatic sensors",
@@ -568,8 +546,6 @@ export const PRODUCTS: Product[] = [
         capacity: "3 Feet 5 Kw",
       },
     ],
-    seoTitle: "Induction Tabletop Hot Plate 3 Feet | Maxwell Induction",
-    seoDescription: "Commercial 3-feet tabletop induction hot plate by Maxwell Induction with 5 kW power for dosas, parathas, and professional tawa griddling.",
   },
   {
     id: "induction-tabletop-deep-fat-fryer",
@@ -580,7 +556,7 @@ export const PRODUCTS: Product[] = [
     brochurePage: 3,
     shortDescription: "Commercial 10-liter tabletop induction deep fat fryer with rapid oil temperature recovery.",
     description: "The Maxwell Tabletop Deep Fat Fryer delivers 5 kW of concentrated induction heating directly to the oil vessel. Unlike traditional immersion electric coils that accumulate burnt sediment and degrade oil quality, induction heats the vessel bottom evenly, prolonging cooking oil lifespan and ensuring crispy, non-greasy fried items.",
-    image: "/products/induction-tabletop-deep-fat-fryer.png",
+    image: "/products/induction-tabletop-deep-fat-fryer.webp",
     features: [
       "10 Liters oil tank capacity with 5 kW induction heating",
       "Cool zone design prevents sediment burning",
@@ -598,8 +574,6 @@ export const PRODUCTS: Product[] = [
         capacity: "5 Kw (10 Ltr)",
       },
     ],
-    seoTitle: "Induction Tabletop Deep Fat Fryer 10L | Maxwell Induction",
-    seoDescription: "Commercial 10-liter tabletop induction deep fryer with 5 kW power. Fast oil recovery and high thermal efficiency from Maxwell Induction.",
   },
   {
     id: "induction-drop-in-buffet-warmer",
@@ -610,7 +584,7 @@ export const PRODUCTS: Product[] = [
     brochurePage: 3,
     shortDescription: "Drop-in flush-mount induction buffet warmer with 10-liter capacity for luxury hotel dining.",
     description: "The Maxwell Drop-in Buffet Warmer is designed for seamless counter integration in luxury hotels, fine dining banquets, and modern food service lines. Delivering gentle, continuous 3.5 kW induction holding for 10-liter vessels, it keeps soups, curries, and sauces hot without scorching, steam water fills, or hazardous canned chafing fuel.",
-    image: "/products/induction-drop-in-buffet-warmer.png",
+    image: "/products/induction-drop-in-buffet-warmer.webp",
     features: [
       "Flush-fitting drop-in counter architecture",
       "10 Liters capacity with 3.5 kW induction heating",
@@ -628,8 +602,6 @@ export const PRODUCTS: Product[] = [
         capacity: "3.5 Kw (10 Ltr)",
       },
     ],
-    seoTitle: "Induction Drop-in Buffet Warmer 10L | Maxwell Induction",
-    seoDescription: "Flush drop-in induction buffet warmer with 10L capacity and 3.5 kW power. Clean, flameless food warming for premium hospitality buffets.",
   },
   {
     id: "induction-tabletop-dual-zone-cooktop-wok",
@@ -640,7 +612,7 @@ export const PRODUCTS: Product[] = [
     brochurePage: 3,
     shortDescription: "Versatile 5 kW + 5 kW dual-zone countertop combination unit featuring flat cooktop and concave wok.",
     description: "The Maxwell Dual Zone Tabletop unit combines a flat induction cooktop and a concave induction wok into a single, compact countertop station. With independent 5 kW power modules on each zone (5 kW + 5 kW), chefs can sauté or boil stocks on the flat zone while stir-frying on the wok simultaneously.",
-    image: "/products/induction-tabletop-dual-zone-cooktop-wok.png",
+    image: "/products/induction-tabletop-dual-zone-cooktop-wok.webp",
     features: [
       "Dual independent 5 kW cooking zones (5 kW + 5 kW)",
       "Combined flat cooking plate and concave wok bowl",
@@ -658,8 +630,6 @@ export const PRODUCTS: Product[] = [
         capacity: "5kw+5kw",
       },
     ],
-    seoTitle: "Induction Tabletop Dual Zone Cooktop / Wok | Maxwell Induction",
-    seoDescription: "Countertop dual zone induction cooktop and wok combination (5 kW + 5 kW) by Maxwell Induction for high-efficiency commercial prep.",
   },
 
   // ==========================================
@@ -675,7 +645,7 @@ export const PRODUCTS: Product[] = [
     featured: true,
     shortDescription: "Industrial-scale commercial induction boiling pan from 100 Liters to 300 Liters capacity.",
     description: "The Maxwell Commercial Induction Boiling Pan is an industrial bulk boiling vessel engineered for mass food production in institutions, prisons, catering colleges, and central kitchens. Offering capacities from 100 L to 300 L and powers from 12 kW to 30 kW, it boils large volumes of rice, lentils, sambar, and soups with uniform heat transfer and zero bottom burning.",
-    image: "/products/commercial-induction-boiling-pan.png",
+    image: "/products/industrial-induction-boiling-pan.webp",
     features: [
       "Large capacities: 100 L, 150 L, 200 L, 250 L, and 300 L",
       "Heavy power modules from 12 kW to 30 kW on 415 V 3-Phase",
@@ -736,8 +706,6 @@ export const PRODUCTS: Product[] = [
         capacity: "100 L",
       },
     ],
-    seoTitle: "Commercial Induction Boiling Pan (100L - 300L) | Maxwell Induction",
-    seoDescription: "Industrial commercial induction boiling pans by Maxwell Induction. 5 models from 100L to 300L capacity, 12 kW to 30 kW power for mass catering.",
   },
   {
     id: "commercial-induction-bratt-pan",
@@ -749,7 +717,7 @@ export const PRODUCTS: Product[] = [
     featured: true,
     shortDescription: "Heavy tilting commercial induction bratt pan with motorized pouring, 100 Liters to 400 Liters capacity.",
     description: "The Maxwell Commercial Induction Bratt Pan (Tilting Braising Pan) is a multi-functional bulk cooking machine designed for braising, shallow frying, boiling, stewing, and steaming large food volumes. Featuring capacities from 100 L up to 400 L and a smooth tilting mechanism, it delivers even heating across the entire pan floor without scorching.",
-    image: "/products/commercial-induction-bratt-pan.png",
+    image: "/products/commercial-induction-bratt-pan.webp",
     features: [
       "Capacities: 100 L, 150 L, 200 L, 250 L, 300 L, and 400 L",
       "Power ratings from 12 kW to 40 kW on 415 V 3-Phase",
@@ -820,8 +788,6 @@ export const PRODUCTS: Product[] = [
         capacity: "100 L",
       },
     ],
-    seoTitle: "Commercial Induction Bratt Pan (100L - 400L) | Maxwell Induction",
-    seoDescription: "Commercial tilting induction bratt pan by Maxwell Induction. 6 models from 100L to 400L capacity, 12 kW to 40 kW power for multi-purpose bulk cooking.",
   },
   {
     id: "commercial-double-chinese-range",
@@ -832,7 +798,7 @@ export const PRODUCTS: Product[] = [
     brochurePage: 5,
     shortDescription: "Heavy-duty dual-wok commercial induction range with 8 kW + 8 kW power for fast Asian kitchen brigades.",
     description: "The Maxwell Commercial Double Chinese Range provides dual high-power induction wok wells (8 kW + 8 kW) in an 1800 mm wide stainless steel station. Engineered with dedicated swing taps, drainage channels, and 400 mm rear backsplash, it gives two chefs the ability to stir-fry concurrently with zero open flames.",
-    image: "/products/commercial-double-chinese-range.png",
+    image: "/products/commercial-double-chinese-range.webp",
     features: [
       "Dual high-heat concave wok induction wells (8 kW + 8 kW)",
       "Generous 1800 mm width x 1040 mm depth footprint",
@@ -852,12 +818,10 @@ export const PRODUCTS: Product[] = [
         frequency: "50 Hz",
       },
     ],
-    seoTitle: "Commercial Double Chinese Range (8+8 kW) | Maxwell Induction",
-    seoDescription: "Heavy-duty double Chinese wok induction range by Maxwell Induction. 8+8 kW dual burners with water faucet and backsplash.",
   },
   {
     id: "multy-food-steamer",
-    slug: "multy-food-steamer",
+    slug: "commercial-induction-multi-food-steamer",
     name: "Multy Food Steamer",
     category: "bulk-cooking",
     categoryName: "Commercial Bulk Cooking",
@@ -865,7 +829,7 @@ export const PRODUCTS: Product[] = [
     featured: true,
     shortDescription: "Freestanding commercial induction multi-food steamer with 8-pan or 12-pan capacity (600x600 mm).",
     description: "The Maxwell Multy Food Steamer is a heavy-duty vertical steaming cabinet engineered for bulk institutional and catering kitchens. Available in 8-pan (1350 mm height) and 12-pan (1845 mm height) versions with 12 kW induction steam generation, it delivers rapid, pressurized steam throughout the entire cabinet volume.",
-    image: "/products/multy-food-steamer.png",
+    image: "/products/commercial-induction-steamer.webp",
     features: [
       "Accommodates 8 or 12 large 600x600 mm steam pans",
       "12 kW high-efficiency induction steam generator",
@@ -896,8 +860,6 @@ export const PRODUCTS: Product[] = [
         capacity: "8 Pan (600/600)",
       },
     ],
-    seoTitle: "Commercial Multy Food Steamer (8 & 12 Pan) | Maxwell Induction",
-    seoDescription: "Industrial vertical multi-food steamer by Maxwell Induction. 8-pan and 12-pan models (600x600mm) powered by 12 kW induction steam generation.",
   },
 
   // ==========================================
@@ -905,14 +867,14 @@ export const PRODUCTS: Product[] = [
   // ==========================================
   {
     id: "cooking-mixer",
-    slug: "cooking-mixer",
+    slug: "induction-cooking-mixer-machine",
     name: "Cooking Mixer",
     category: "specialized",
     categoryName: "Specialized Induction Equipment",
     brochurePage: 6,
     shortDescription: "Motorized planetary scraping induction cooking mixer from 100L to 300L for gravies and sweets.",
     description: "The Maxwell Cooking Mixer integrates precision induction heating with a heavy motorized planetary scraper agitator. Available in 100 L, 150 L, 200 L, and 300 L capacities with up to 30 kW induction heating, it continuously wipes the bottom and sidewalls of the bowl, preventing sticking and burning when cooking thick sauces, halwa, gravies, and sweets.",
-    image: "/products/cooking-mixer.png",
+    image: "/products/induction-cooking-mixer-machine.webp",
     features: [
       "Planetary motorized agitator with Teflon scraping blades",
       "Capacities: 100 L, 150 L, 200 L, and 300 L",
@@ -963,19 +925,17 @@ export const PRODUCTS: Product[] = [
         capacity: "100L",
       },
     ],
-    seoTitle: "Commercial Induction Cooking Mixer (100L - 300L) | Maxwell Induction",
-    seoDescription: "Industrial induction cooking mixer with motorized planetary scraper by Maxwell Induction. 100L to 300L capacity for sweets, sauces, and gravies.",
   },
   {
     id: "four-zone",
-    slug: "four-zone",
+    slug: "four-zone-commercial-induction-range",
     name: "Four Zone",
     category: "specialized",
     categoryName: "Specialized Induction Equipment",
     brochurePage: 6,
     shortDescription: "Freestanding four-burner induction cooking suite with 4 x 3.5 kW independent cooking zones.",
     description: "The Maxwell Four Zone commercial induction cooking range is designed as the primary cooking battery for hotel and restaurant kitchens. Featuring 4 independent circular flat cooking zones with 4 x 3.5 kW power modules, chefs can simmer stocks, sauté vegetables, boil pastas, and reduce sauces simultaneously on a single sleek station.",
-    image: "/products/four-zone.png",
+    image: "/products/four-zone-commercial-induction-range.webp",
     features: [
       "4 Independent circular induction cooking zones",
       "Power rating: 4 x 3.5 kW (14 kW total output)",
@@ -995,8 +955,6 @@ export const PRODUCTS: Product[] = [
         frequency: "50 Hz",
       },
     ],
-    seoTitle: "Four Zone Commercial Induction Range (4x3.5 kW) | Maxwell Induction",
-    seoDescription: "Freestanding 4-burner commercial induction range with 4 x 3.5 kW zones by Maxwell Induction. Model MI-CC-4XF for multi-dish professional cooking.",
   },
 
 

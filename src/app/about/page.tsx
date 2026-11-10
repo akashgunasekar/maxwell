@@ -19,19 +19,21 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import SectionHeading from "@/components/SectionHeading";
 import GroupBrands from "@/components/GroupBrands";
 import { SITE_CONFIG } from "@/data/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About Maxwell Induction | Commercial Induction Equipment",
+export const metadata: Metadata = buildPageMetadata({
+  title: "About Maxwell Induction | Commercial Kitchen Equipment Manufacturer",
   description:
-    "Learn about Maxwell Induction's focus on commercial induction kitchen technology, engineering durable equipment with ~90% thermal efficiency, and cleaner kitchen operations.",
+    "Learn about Maxwell Induction, commercial kitchen equipment manufacturer in Chennai, India. Engineering durable induction cooking suites with ~90% thermal efficiency.",
+  path: "/about",
   keywords: [
-    "about Maxwell Induction",
-    "commercial induction manufacturer",
-    "induction kitchen technology India",
-    "industrial induction cooktop manufacturer",
-    "clean commercial kitchens",
+    "commercial kitchen equipment manufacturer",
+    "commercial induction equipment manufacturer in chennai",
+    "industrial induction equipment supplier in india",
+    "energy efficient induction cooking equipment",
+    "commercial kitchen equipment suppliers",
   ],
-};
+});
 
 export default function AboutPage() {
   return (

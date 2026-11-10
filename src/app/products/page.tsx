@@ -5,28 +5,26 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { PRODUCTS } from "@/data/products";
 import { FileDown, Sparkles } from "lucide-react";
 import { SITE_CONFIG } from "@/data/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Commercial Induction Equipment | Complete Product Catalogue",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Commercial Induction Kitchen Equipment | Product Catalogue | Maxwell",
   description:
-    "Explore Maxwell Induction's complete range of commercial induction cooking, heating, frying, steaming and specialized kitchen equipment. 20+ heavy-duty models.",
+    "Explore Maxwell Induction's complete range of 20 commercial induction cooking equipment models: boiling pans, bratt pans, cooktops, hot plates, woks & steamers.",
+  path: "/products",
   keywords: [
-    "commercial induction equipment",
+    "commercial induction kitchen equipment",
+    "commercial induction cooking equipment",
     "commercial induction cooktop",
-    "commercial induction wok",
-    "commercial induction hot plate",
-    "commercial induction boiling pan",
-    "commercial induction bratt pan",
+    "induction hot plate",
+    "induction boiling pan",
+    "induction bratt pan",
+    "induction cooking mixer machine",
     "induction steamer",
-    "commercial kitchen induction",
+    "heavy duty induction equipment",
+    "industrial cooking equipment",
   ],
-  openGraph: {
-    title: "Commercial Induction Equipment | Maxwell Induction",
-    description:
-      "Explore Maxwell Induction's full 28-product commercial catalogue across tabletop, freestanding, bulk cooking, and specialized steam equipment.",
-    url: `${SITE_CONFIG.domain}/products`,
-  },
-};
+});
 
 function ProductsContent() {
   return (
@@ -39,7 +37,7 @@ function ProductsContent() {
           <div>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-100 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-sky-800 mb-2 border border-sky-200">
               <Sparkles className="h-3 w-3" />
-              Full Product Catalogue (28 Equipment Types)
+              Full Product Catalogue ({PRODUCTS.length} Commercial Models)
             </span>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               Commercial Induction Kitchen Equipment

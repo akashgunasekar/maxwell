@@ -13,25 +13,22 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { SITE_CONFIG } from "@/data/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact Maxwell Induction | Request a Quote",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Contact Maxwell Induction | Commercial Induction Equipment Manufacturer Chennai",
   description:
-    "Get in touch with Maxwell Induction headquarters in Chennai. Request product specifications, customized kitchen quotations, and Pan-India installation support.",
+    "Contact Maxwell Induction in Mel Ayanambakkam, Chennai. Get B2B factory direct quotes, electrical sizing guidance, and Pan-India commercial induction support.",
+  path: "/contact",
   keywords: [
-    "contact Maxwell Induction",
-    "commercial induction quote",
-    "Maxwell induction Chennai address",
+    "commercial induction equipment manufacturer in chennai",
+    "commercial induction kitchen equipment in india",
+    "commercial kitchen equipment manufacturer in tamil nadu",
+    "contact maxwell induction",
     "commercial induction price inquiry",
-    "induction kitchen equipment manufacturers India",
+    "industrial induction equipment supplier in india",
   ],
-  openGraph: {
-    title: "Contact Maxwell Induction | Request a Quote",
-    description:
-      "Request equipment pricing, technical guidance, and factory-direct commercial induction solutions.",
-    url: `${SITE_CONFIG.domain}/contact`,
-  },
-};
+});
 
 export default function ContactPage() {
   const phoneRaw = SITE_CONFIG.contact.primaryPhone.replace(/\D/g, "");

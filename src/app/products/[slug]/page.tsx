@@ -13,17 +13,20 @@ import {
   FileDown,
   Layers,
   Sparkles,
+  HelpCircle,
 } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ProductModels from "@/components/ProductModels";
 import ProductCard from "@/components/ProductCard";
 import ContactForm from "@/components/ContactForm";
+import JsonLd from "@/components/JsonLd";
 import {
   PRODUCTS,
   getProductBySlug,
-  getRelatedProducts,
 } from "@/data/products";
+import { getProductSeo, getRelatedProductsSeo } from "@/data/product-seo";
 import { SITE_CONFIG } from "@/data/site";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 interface ProductPageProps {
   params: Promise<{
@@ -51,29 +54,44 @@ export async function generateMetadata({
     };
   }
 
+  const seo = getProductSeo(product);
+
   return {
-    title: product.seoTitle,
-    description: product.seoDescription,
+    title: { absolute: seo.title },
+    description: seo.description,
     keywords: [
       product.name.toLowerCase(),
       product.categoryName.toLowerCase(),
       "commercial induction",
       "industrial induction cooking",
       "Maxwell Induction",
+      ...seo.keywords,
       ...product.models.map((m) => m.model.toLowerCase()),
     ],
+    alternates: {
+      canonical: `/products/${product.slug}`,
+    },
     openGraph: {
-      title: product.seoTitle,
-      description: product.seoDescription,
-      url: `${SITE_CONFIG.domain}/products/${product.slug}`,
+      title: seo.title,
+      description: seo.description,
+      url: `/products/${product.slug}`,
+      siteName: SITE_CONFIG.name,
+      locale: "en_IN",
+      type: "website",
       images: [
         {
           url: product.image,
           width: 800,
           height: 600,
-          alt: `${product.name} Commercial Induction Equipment`,
+          alt: seo.imageAlt,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seo.title,
+      description: seo.description,
+      images: [product.image],
     },
   };
 }
@@ -86,7 +104,8 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     notFound();
   }
 
-  const relatedProducts = getRelatedProducts(product, 4);
+  const seo = getProductSeo(product);
+  const relatedProducts = getRelatedProductsSeo(product, 4);
 
   // Product JSON-LD schema
   const productJsonLd = {
@@ -94,7 +113,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     "@type": "Product",
     name: product.name,
     image: `${SITE_CONFIG.domain}${product.image}`,
-    description: product.shortDescription,
+    description: seo.description,
     brand: {
       "@type": "Brand",
       name: "Maxwell Induction",
@@ -115,26 +134,23 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     })),
   };
 
+  const breadcrumbsData = [
+    { label: "Products", href: "/products" },
+    {
+      label: product.categoryName,
+      href: `/products?category=${product.category}`,
+    },
+    { label: product.name },
+  ];
+
   return (
     <div className="w-full bg-slate-50 py-10 lg:py-14">
-      {/* Product JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
-      />
+      {/* Product & Breadcrumb JSON-LD */}
+      <JsonLd data={[productJsonLd, breadcrumbJsonLd(breadcrumbsData)]} />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb Navigation */}
-        <Breadcrumbs
-          items={[
-            { label: "Products", href: "/products" },
-            {
-              label: product.categoryName,
-              href: `/products?category=${product.category}`,
-            },
-            { label: product.name },
-          ]}
-        />
+        <Breadcrumbs items={breadcrumbsData} />
 
         {/* Product Hero Section */}
         <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 lg:p-10 shadow-xs mb-10">
@@ -145,7 +161,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 <div className="relative h-full w-full">
                   <Image
                     src={product.image}
-                    alt={`${product.name} - Maxwell Commercial Induction Equipment`}
+                    alt={seo.imageAlt}
                     fill
                     priority
                     className="object-contain"
@@ -177,12 +193,14 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               </span>
 
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-                {product.name}
+                {seo.h1}
               </h1>
 
-              <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-                {product.description}
-              </p>
+              <div className="mt-3 space-y-2 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                {seo.intro.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
 
               {/* Quick Specs Highlight Strip */}
               <div className="mt-6 rounded-xl bg-slate-50 border border-slate-200 p-4">
@@ -287,6 +305,37 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
           <ProductModels models={product.models} />
         </div>
+
+        {/* Buyer FAQs Section */}
+        {seo.faqs.length > 0 && (
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs mb-10">
+            <div className="mb-6 border-b border-slate-100 pb-4">
+              <span className="text-xs font-bold uppercase tracking-wider text-sky-800">
+                Commercial Buyer Questions
+              </span>
+              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 mt-0.5">
+                Frequently Asked Questions about {product.name}
+              </h2>
+            </div>
+
+            <div className="space-y-4">
+              {seo.faqs.map((faq, idx) => (
+                <div
+                  key={idx}
+                  className="rounded-xl border border-slate-200 bg-slate-50/60 p-4 sm:p-5"
+                >
+                  <h3 className="text-sm sm:text-base font-bold text-slate-900 flex items-start gap-2.5">
+                    <HelpCircle className="h-4 w-4 text-sky-700 shrink-0 mt-0.5" />
+                    <span>{faq.q}</span>
+                  </h3>
+                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed pl-6.5 font-normal">
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Quote Request Section */}
         <div id="inquiry" className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-10 shadow-xs mb-14">

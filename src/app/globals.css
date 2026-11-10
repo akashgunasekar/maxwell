@@ -1,12 +1,36 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #1d4a98;
+  --color-primary-hover: #163a78;
+  --color-primary-light: #eff4fb;
+  --color-brand-blue: #1d4a98;
+  --color-brand-blue-hover: #163a78;
+  --color-brand-navy: #0a1e3f;
+  --color-sky-50: #eff4fb;
+  --color-sky-100: #dbe6f6;
+  --color-sky-200: #bcd2f0;
+  --color-sky-500: #2b5cb3;
+  --color-sky-600: #1d4a98;
+  --color-sky-700: #1d4a98;
+  --color-sky-800: #163a78;
+  --color-sky-900: #102954;
+  --color-sky-950: #0a1b38;
+  --color-blue-600: #1d4a98;
+  --color-blue-700: #163a78;
+  --color-blue-800: #102954;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
+  --primary: #1d4a98;
+  --primary-hover: #163a78;
+  --color-primary: #1d4a98;
   --brand-navy: #0a1e3f;
-  --brand-blue: #0284c7;
-  --brand-blue-hover: #0369a1;
-  --brand-accent: #2563eb;
+  --brand-blue: #1d4a98;
+  --brand-blue-hover: #163a78;
+  --brand-accent: #1d4a98;
   --surface-light: #f8fafc;
   --surface-muted: #f1f5f9;
   --border-light: #e2e8f0;
@@ -38,12 +62,12 @@ body {
 
 /* Subtle engineering grid background */
 .bg-grid-tech {
-  background-image: radial-gradient(rgba(2, 132, 199, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(29, 74, 152, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
 .bg-dot-blue {
-  background-image: radial-gradient(#0284c7 1px, transparent 1px);
+  background-image: radial-gradient(#1d4a98 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
@@ -58,8 +82,8 @@ body {
 
 .precision-card:hover {
   transform: translateY(-3px);
-  border-color: #93c5fd;
-  box-shadow: 0 12px 24px -6px rgba(2, 132, 199, 0.12), 0 4px 10px -2px rgba(10, 30, 63, 0.04);
+  border-color: #9cb5dc;
+  box-shadow: 0 12px 24px -6px rgba(29, 74, 152, 0.14), 0 4px 10px -2px rgba(10, 30, 63, 0.04);
 }
 
 /* Subtly tinted badges */
@@ -71,9 +95,9 @@ body {
   font-size: 0.75rem;
   font-weight: 600;
   border-radius: 9999px;
-  background-color: #e0f2fe;
-  color: #0369a1;
-  border: 1px solid #bae6fd;
+  background-color: #eff4fb;
+  color: #1d4a98;
+  border: 1px solid #c9d8ee;
 }
 
 /* Smooth custom scrollbar */
@@ -90,4 +114,24 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
+}
+
+/* Hero background slider: slow Ken Burns zoom on the active slide */
+@keyframes hero-kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.hero-kenburns {
+  animation: hero-kenburns 9s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-kenburns {
+    animation: none;
+  }
 }

@@ -6,25 +6,21 @@ import SectionHeading from "@/components/SectionHeading";
 import Services from "@/components/Services";
 import { ShieldCheck, Phone, Mail, Wrench, Settings, ArrowRight, CheckCircle2 } from "lucide-react";
 import { SITE_CONFIG } from "@/data/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Installation & After-Sales Support | Maxwell Induction",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Installation, Warranty & After-Sales Support | Maxwell Induction",
   description:
-    "Explore Maxwell Induction's Pan-India service support network, on-site commissioning, operator technical training, genuine OEM spares, and 12-month standard warranty.",
+    "Pan-India commercial induction installation, on-site commissioning, operator training, genuine OEM spares, and 12-month standard warranty from Maxwell Induction.",
+  path: "/services",
   keywords: [
-    "commercial induction service India",
-    "induction cooker repair service",
-    "Maxwell induction installation",
-    "commercial induction spare parts",
+    "commercial induction installation",
     "commercial induction warranty",
+    "commercial induction service india",
+    "commercial kitchen equipment suppliers",
+    "industrial induction equipment supplier in india",
   ],
-  openGraph: {
-    title: "Installation & After-Sales Support | Maxwell Induction",
-    description:
-      "Pan-India on-site technical support, operator training, genuine spares, and 12 months equipment warranty.",
-    url: `${SITE_CONFIG.domain}/services`,
-  },
-};
+});
 
 export default function ServicesPage() {
   return (

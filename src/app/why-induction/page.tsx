@@ -5,26 +5,22 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import WhyInduction from "@/components/WhyInduction";
 import { ArrowRight, FileDown, CheckCircle2, ShieldCheck, Phone } from "lucide-react";
 import { SITE_CONFIG } from "@/data/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Why Choose Commercial Induction Cooking? | Maxwell Induction",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Why Choose Commercial Induction Cooking? | Energy Efficiency & Benefits",
   description:
-    "Discover the documented benefits of commercial induction cooking: safe flame-free operation, fast heat transfer, cool ambient kitchens, easy cleaning, and ~90% energy efficiency.",
+    "Discover the benefits of commercial induction cooking equipment: ~90% energy efficiency, zero open flames, cooler ambient kitchens, and fast temperature response.",
+  path: "/why-induction",
   keywords: [
-    "why induction cooking",
-    "commercial induction vs gas",
-    "benefits of induction cooking",
-    "energy efficient commercial kitchen",
-    "induction efficiency 90 percent",
-    "cool kitchen technology",
+    "benefits of commercial induction cooking equipment",
+    "induction vs lpg",
+    "energy efficiency of commercial induction kitchen equipment",
+    "why hotels should switch to commercial induction equipment",
+    "commercial induction cooking equipment",
+    "best induction equipment",
   ],
-  openGraph: {
-    title: "Why Choose Commercial Induction Cooking? | Maxwell Induction",
-    description:
-      "Safe, Fast, Clean, Cool, Efficient. Discover why modern commercial kitchens are switching to Maxwell Induction technology.",
-    url: `${SITE_CONFIG.domain}/why-induction`,
-  },
-};
+});
 
 export default function WhyInductionPage() {
   return (
